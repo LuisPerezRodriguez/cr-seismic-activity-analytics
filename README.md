@@ -12,3 +12,12 @@ The primary objective of this architecture is to identify seismic patterns over 
 * **Storage Format:** Delta Lake (ACID Transactions)
 * **Architecture Design:** Medallion Architecture (Landing ➔ Bronze ➔ Silver ➔ Gold)
 * **Data Source:** USGS Earthquake Catalog API (FDSN Event Web Service)
+
+
+# Research Hypotheses & Analytical Objectives
+
+To guide the Exploratory Data Analysis (EDA) and prevent post-hoc bias, this project formalizes three core hypotheses based on regional geodynamics and statistical seismology:
+
+1. **Spatial Severity (Hypothesis 1):** Events along the Pacific subduction boundary (west of 85.0° W) exhibit higher average magnitudes and greater focal depth variance than inland crustal events.
+2. **Magnitude Scale Decay (Hypothesis 2):** Micro and minor earthquakes (Magnitude < 4.0) comprise at least 85% of total catalog volume, following an exponential frequency distribution.
+3. **Temporal Swarm Dynamics (Hypothesis 3):** High-magnitude triggers (Magnitude >= 5.5) initiate localized temporal clusters, causing a statistically significant increase (over 200%) in event frequency within the subsequent 72 hours.
